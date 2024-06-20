@@ -17,7 +17,7 @@ void main(List<String> args) {
     for (int i = 0; i < temasExposicion; i++) {
       print("Ingrese los diferentes tipos de exposición ${i + 1}:");
       TipoExposicion = stdin.readLineSync() ?? '';
-      if () {
+      if (holi) {
 
       }
     }
