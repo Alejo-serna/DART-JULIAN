@@ -1,0 +1,79 @@
+<<<<<<< HEAD
+CREATE TABLE centroFormacion (
+  codCentro INT PRIMARY KEY,
+  nombre VARCHAR(50) NOT NULL,
+  ubicacion VARCHAR(100),
+  descripcion TEXT,
+  fechaCreacion DATETIME NOT NULL
+);
+CREATE TABLE instructor (
+  idInstructor INT PRIMARY KEY AUTO_INCREMENT,
+  nombre VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  fechaContrato DATETIME NOT NULL,
+  salario FLOAT,
+  genero CHAR(1),
+  profesion VARCHAR(50) NOT NULL,
+  fkcodCentroCentroFormacion INT NOT NULL,
+  FOREIGN KEY (fkcodCentroCentroFormacion) REFERENCES centroFormacion(codCentro)
+);
+
+
+
+INSERT INTO centroFormacion (codCentro,nombre,ubicacion,descripcion,fechaCreacion)
+VALUES (878787,'PROCESOS INDUSTRIALES','SENA','El SENA, es un establecimiento público del orden nacional, con personería jurídica, patrimonio propio e independiente, y autonomía administrativa; adscrito al Ministerio del Trabajo, de Colombia. SENA una entidad de formación profesional al alcance de todos.','2006-02-14'
+);
+
+INSERT INTO centroFormacion (codCentro,nombre,ubicacion,descripcion,fechaCreacion)
+VALUES (424247,'CAFETERA','SENA','El SENA, es un establecimiento público del orden nacional, con personería jurídica, patrimonio propio e independiente, y autonomía administrativa; adscrito al Ministerio del Trabajo, de Colombia. SENA una entidad de formación profesional al alcance de todos.','2009-05-15'
+);
+
+INSERT INTO centroFormacion (codCentro,nombre,ubicacion,descripcion,fechaCreacion)
+VALUES (523456,'COMERCIO Y SERVICIOS','SENA','El SENA, es un establecimiento público del orden nacional, con personería jurídica, patrimonio propio e independiente, y autonomía administrativa; adscrito al Ministerio del Trabajo, de Colombia. SENA una entidad de formación profesional al alcance de todos.','2014-08-25'
+);
+
+
+
+INSERT INTO instructor (idInstructor,nombre,email,fechaContrato,salario,genero,profesion,fkcodCentroCentroFormacion)
+VALUES (10001,'SANTIAGO BRICENOS','bricenosantiago@gmail.com','2019-02-02','1.000.000','M','INSTRUCTOR', 878787);
+
+=======
+CREATE TABLE centroFormacion (
+  codCentro INT PRIMARY KEY,
+  nombre VARCHAR(50) NOT NULL,
+  ubicacion VARCHAR(100),
+  descripcion TEXT,
+  fechaCreacion DATETIME NOT NULL
+);
+CREATE TABLE instructor (
+  idInstructor INT PRIMARY KEY AUTO_INCREMENT,
+  nombre VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  fechaContrato DATETIME NOT NULL,
+  salario FLOAT,
+  genero CHAR(1),
+  profesion VARCHAR(50) NOT NULL,
+  fkcodCentroCentroFormacion INT NOT NULL,
+  FOREIGN KEY (fkcodCentroCentroFormacion) REFERENCES centroFormacion(codCentro)
+);
+
+
+
+INSERT INTO centroFormacion (codCentro,nombre,ubicacion,descripcion,fechaCreacion)
+VALUES (878787,'PROCESOS INDUSTRIALES','SENA','El SENA, es un establecimiento público del orden nacional, con personería jurídica, patrimonio propio e independiente, y autonomía administrativa; adscrito al Ministerio del Trabajo, de Colombia. SENA una entidad de formación profesional al alcance de todos.','2006-02-14'
+);
+
+INSERT INTO centroFormacion (codCentro,nombre,ubicacion,descripcion,fechaCreacion)
+VALUES (424247,'CAFETERA','SENA','El SENA, es un establecimiento público del orden nacional, con personería jurídica, patrimonio propio e independiente, y autonomía administrativa; adscrito al Ministerio del Trabajo, de Colombia. SENA una entidad de formación profesional al alcance de todos.','2009-05-15'
+);
+
+INSERT INTO centroFormacion (codCentro,nombre,ubicacion,descripcion,fechaCreacion)
+VALUES (523456,'COMERCIO Y SERVICIOS','SENA','El SENA, es un establecimiento público del orden nacional, con personería jurídica, patrimonio propio e independiente, y autonomía administrativa; adscrito al Ministerio del Trabajo, de Colombia. SENA una entidad de formación profesional al alcance de todos.','2014-08-25'
+);
+
+
+
+INSERT INTO instructor (idInstructor,nombre,email,fechaContrato,salario,genero,profesion,fkcodCentroCentroFormacion)
+VALUES (10001,'SANTIAGO BRICENOS','bricenosantiago@gmail.com','2019-02-02','1.000.000','M','INSTRUCTOR', 878787);
+
+>>>>>>> 866bf2b123766501e29120da4c619e3130a62ebc
