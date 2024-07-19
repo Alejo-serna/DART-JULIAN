@@ -11,5 +11,5 @@ void main() {
 
 // DEFINICION VARIABLES
 
-List<double>
+List<double>;
 }
