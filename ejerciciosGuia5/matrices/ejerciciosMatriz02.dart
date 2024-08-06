@@ -8,27 +8,32 @@ void main(List<String> args) {
   del número mayor almacenado en la matriz. Los números son diferentes.
   */
 
-  List<List<double>> matriz = [];
-  int cantFilas = 10, cantColumnas = 10;
-  double numero, numMayor = 0;
+  // DEFINICION
+  List<double> vectorA = [];
+  List<double> vectorB = [];
+  List<double> vectorC = [];
+  double numVectorA, numVectorB;
 
-  for (int i = 0; i < cantFilas; i++) {
-    List<double> fila = [];
-    for (int j = 0; j < cantColumnas; j++) {
-      print("NUMEROS DIFERENTES");
-      print("Digite el número para la posición ($i,$j)");
-      numero = double.parse(stdin.readLineSync()!);
-      fila.add(numero);
+  int cantNumerosLista;
+// PROCESO
+  print("ingrese la cantidad de numero a ingresar");
+  cantNumerosLista = int.parse(stdin.readLineSync()!);
 
-      if ()
-    }
-   
-    matriz.add(fila);
+  for (var i = 0; i < cantNumerosLista; i++) {
+    print("ingrese el numero #${i + 1} del vector A");
+    numVectorA = double.parse(stdin.readLineSync()!);
+    vectorA.add(numVectorA);
+    print("*************");
+    print("ingrese el numero #${i + 1} del vector B");
+    numVectorB = double.parse(stdin.readLineSync()!);
+    vectorB.add(numVectorB);
+    print("vecto A");
+    print(vectorA);
+    print("vecto B");
+    print(vectorB);
   }
-
-  if (numero >= 10) {
-    print("El número mayor es $numMayor y esta en la posición ($i,$j)");
+  for (var i = 0; i < vectorB.length; i++) {
+    vectorC.add(vectorA[i] + vectorB[i]);
   }
-
-
+  print(" el rsultado delvector C es: $vectorC");
 }

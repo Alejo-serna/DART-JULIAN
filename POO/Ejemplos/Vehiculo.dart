@@ -2,15 +2,25 @@ class Vehiculo {
   String color;
   int velocidad;
   double tamanio;
-  int disminucion;
 
   // Constructor Clase Vehiculo
-  Vehiculo(this.color, this.velocidad, this.tamanio, this.disminucion) {}
+  Vehiculo(this.color, this.velocidad, this.tamanio) {}
   // Vehiculo(String color, int velocidad, double tamanio) {
   // this.color = col;
   // this.velocidad = vel;
   // this.tamanio = tam;
   // }
+
+  // MÉTODOS SET Y GET
+  // Setea o asigna un nuevo valor para el atributo color
+  void setColor(String newColor) {
+    this.color = newColor;
+  }
+
+  // Permite obtener el valor del atributo color
+  String getColor() {
+    return this.color;
+  }
 
   // Método Avanzar
   void avanzar(int velAvanz) {
@@ -27,16 +37,6 @@ class Vehiculo {
   void detenerse() {
     velocidad = 0;
     print("El vehiculo se detiene");
-  }
-
-  void disminuirVelocidad(int dismAvanz) {
-    int cantDism = this.disminucion - dismAvanz;
-    if (cantDism >= 0) {
-      this.disminucion = cantDism;
-      print("El vehiculo disminuye a ${this.disminucion}");
-    } else {
-      print("El resultado no puede ser menor a 0");
-    }
   }
 
   void parquearCarro(String recibParquear) {

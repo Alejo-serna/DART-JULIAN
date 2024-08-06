@@ -22,7 +22,7 @@ void main(List<String> args) {
     disminucionUsuario = int.parse(stdin.readLineSync()!);
     print("*" * 50);
     // Se instancia la clase vehiculo y se crea el objeto con los valores del usuario
-    Vehiculo vehiculo_obj = Vehiculo(colorUsuario, velocidadUsuario, tamanioUsuario, disminucionUsuario);
+    Vehiculo vehiculo_obj = Vehiculo(colorUsuario, velocidadUsuario, tamanioUsuario);
     // Se añade el vehiculo a la lista
     listaVehiculos.add(vehiculo_obj);
   }
@@ -34,7 +34,6 @@ void main(List<String> args) {
     listaVehiculos[i].avanzar(20);
     listaVehiculos[i].avanzar(80);
     listaVehiculos[i].avanzar(100);
-    listaVehiculos[i].disminuirVelocidad(40);
     print("Ingrese el lugar para parquear el carro ${i+1}");
     parqueoUsuario = stdin.readLineSync()!;
     listaVehiculos[i].parquearCarro(parqueoUsuario);
